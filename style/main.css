@@ -24,13 +24,19 @@ header {
 	position: fixed;
 	width: 100%;
 	z-index: 9999999;
-}
+	transition: 1s;
+	background: rgba(0,0,0,0);}
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
 	header
 	{
 		background: linear-gradient(123.83deg, #00695C 10%, #224563 100%);
 	}
+}
+
+.scrolled {
+	background: linear-gradient(123.83deg, #00695C 10%, #224563 100%);
+	opacity: .95;
 }
 
 header ul {
@@ -119,7 +125,21 @@ header ul >*:nth-child(5){
 .main-content
 {
 	background: linear-gradient(123.83deg, #00695C 25%, #224563 100%);
+	background-size: 400% 400%;
+	animation: gradientBG 7s ease infinite;
 	padding: 105px 0;
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .content__icons 
@@ -146,6 +166,13 @@ header ul >*:nth-child(5){
 	padding-top: 10px;
 	color: #FFFFFF;
 	width: 215px;
+}
+
+@media (max-width: 768px) {
+	.content__icons__icon p
+	{
+		width: 100%;
+	}
 }
 
 .content__icons__icon img {
@@ -330,8 +357,13 @@ header ul >*:nth-child(5){
 	display: flex;
 	flex-direction: column;
 	border: 6px solid #FFFFFF;
-	box-sizing: border-box;
 	box-shadow: 7px 7px 6px rgba(49, 46, 46, 0.25);
+}
+
+@media (max-width: 414px) {
+	.contacts-block__form__block {
+		border: none;
+	}
 }
 
 .contacts-block__form__block >*
@@ -370,6 +402,14 @@ header ul >*:nth-child(5){
 	font-size: 22px;
 }
 
+@media (max-width: 414px) {
+	.contacts-block__form__block label a
+	{
+		font-size: 15px;
+		width: 80%;
+	}
+}
+
 #check
 {	
 	bottom: 126px;
@@ -399,6 +439,14 @@ header ul >*:nth-child(5){
 	opacity: 0.5;
 }
 
+@media (max-width: 414px) {
+	#form-button
+	{
+		width: 80%;
+		font-size: 20px;
+	}
+}
+
 #form-button:hover
 {	
 	box-shadow: 7px 10px 10px rgba(49, 46, 46, 0.25);
@@ -422,6 +470,12 @@ header ul >*:nth-child(5){
 	color: white;
 }
 
+@media (max-width: 414px) {
+	.contacts-block__form__block h4	{
+		height: 160px;
+	}
+}
+
 .contacts-block__form__block h4:hover
 {	
 	background: rgba(0,0,0,0);
@@ -443,6 +497,13 @@ header ul >*:nth-child(5){
 	color: white;
 }
 
+@media (max-width: 768px) {
+	.contacts-block__form__call 
+	{
+		text-align: center;
+	}
+}
+
 .contacts-block__form__call h3
 {
 	font-size: 26px;
@@ -454,6 +515,14 @@ header ul >*:nth-child(5){
 	margin: 15px 0;
 	font-size: 50px;
 }
+
+@media (max-width: 414px) {
+	.contacts-block__form__call p
+	{
+		font-size: 36px;
+	}
+}
+
 /*FOTTTTTTTTTTTTTTTTTEEEEEEEEERRRRRRR*/
 footer 
 {
@@ -495,6 +564,20 @@ footer
 .footer-block__follow 
 {
 	display: flex;
+}
+
+@media (max-width: 414px) {
+	.footer-block__follow
+	{
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 414px) {
+	.footer-block__follow p
+	{
+		font-size: 12px;
+	}
 }
 
 .footer-block div:nth-child(even)
