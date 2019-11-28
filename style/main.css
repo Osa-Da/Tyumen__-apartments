@@ -30,12 +30,12 @@ header {
 @media (max-width: 991px) {
 	header
 	{
-		background: linear-gradient(123.83deg, #00695C 10%, #224563 100%);
+		background: #00695C;
 	}
 }
 
 .scrolled {
-	background: linear-gradient(123.83deg, #00695C 10%, #224563 100%);
+	background: #00695C;
 	opacity: .95;
 }
 
@@ -108,7 +108,19 @@ header ul >*:nth-child(5){
 	margin: 40px 0 0 30px;
 	font-size: 64px;
 	display: inline-block;
+	border-bottom: 3px solid  white;
+	text-decoration: none;
+	color: white;
+	transition: 0.5s ease;
+}
+
+.main__banner__numberTel:hover {
+	margin: 40px 0 0 30px;
+	font-size: 64px;
+	display: inline-block;
 	border-bottom: 3px solid  #E06D67;
+	text-decoration: none;
+	color: white;
 }
 
 @media (max-width: 768px) {
@@ -510,14 +522,16 @@ header ul >*:nth-child(5){
 	color: white;
 }
 
-.contacts-block__form__call p
-{
+.contacts-block__form__call a
+{	
+	text-decoration: none;
+	color: white;
 	margin: 15px 0;
 	font-size: 50px;
 }
 
 @media (max-width: 414px) {
-	.contacts-block__form__call p
+	.contacts-block__form__call a
 	{
 		font-size: 36px;
 	}
@@ -586,4 +600,22 @@ footer
 	width: 2px;
 	margin: 14px 30px 0;
 	background: white;
+}
+
+.aboutUs-block__map {
+	position: relative;
+	height: 910px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	align-items: center;
+}
+
+.aboutUs-block__map p {
+	width: 100%;
+	color: white;
+	font-size: 40px;
+	position: absolute;
+	top: center;
+	margin: 0 auto;
 }
